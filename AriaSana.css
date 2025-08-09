@@ -1,0 +1,1037 @@
+/* =================================== */
+/*      STILI SPECIFICI ARIASANA       */
+/* =================================== */
+
+/* Hero Section */
+.ariasana-hero {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 50%, #e1f5fe 100%);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: #001a33;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.hero-divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #00bcd4, #4fc3f7);
+    margin: 1.5rem 0;
+    border-radius: 2px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #2c5282;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #00bcd4;
+    border: 2px solid #00bcd4;
+}
+
+.btn-secondary:hover {
+    background: #00bcd4;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 188, 212, 0.2);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.quality-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4caf50;
+    font-weight: 600;
+}
+
+.quality-indicator i {
+    font-size: 1.2rem;
+}
+
+/* Sezione Problematiche */
+.problematiche {
+    padding: 5rem 2rem;
+    background: #fff;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.section-header h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: #001a33;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.problemi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.problema-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.problema-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.problema-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.problema-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #001a33;
+    margin-bottom: 1rem;
+}
+
+.problema-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Sezione Servizi */
+.servizi {
+    padding: 5rem 2rem;
+    background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+}
+
+.servizi-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.servizio-card {
+    display: flex;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.1);
+    transition: all 0.3s ease;
+}
+
+.servizio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 188, 212, 0.15);
+}
+
+.servizio-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.servizio-image {
+    flex: 1;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.servizio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.servizio-card:hover .servizio-image img {
+    transform: scale(1.05);
+}
+
+.servizio-content {
+    flex: 1;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.servizio-content h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #001a33;
+    margin-bottom: 1rem;
+}
+
+.servizio-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.servizio-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.servizio-content li {
+    padding: 0.5rem 0;
+    color: #666;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.servizio-content li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+/* Sezione Benefici */
+.benefici {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f1f8e9 100%);
+}
+
+.benefici-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.benefici-text {
+    flex: 1;
+}
+
+.benefici-text h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: #001a33;
+    margin-bottom: 2rem;
+}
+
+.benefici-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.beneficio-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.beneficio-item:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateX(10px);
+}
+
+.beneficio-item i {
+    font-size: 1.5rem;
+    color: #4caf50;
+    margin-top: 0.2rem;
+    min-width: 24px;
+}
+
+.beneficio-item h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #001a33;
+    margin-bottom: 0.3rem;
+}
+
+.beneficio-item p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.benefici-image {
+    flex: 1;
+    max-width: 450px;
+}
+
+.benefici-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Call to Action */
+.cta-ariasana {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #001a33 0%, #003366 100%);
+    text-align: center;
+    color: white;
+}
+
+.cta-content h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.cta-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn-cta {
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+}
+
+.btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+}
+
+.cta-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.cta-contact i {
+    color: #00bcd4;
+    font-size: 1.3rem;
+}
+
+.cta-contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.cta-contact a:hover {
+    color: #00bcd4;
+}
+
+/* Responsività */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .servizio-card,
+    .servizio-card:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .benefici-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ariasana-hero {
+        padding: 3rem 1rem;
+        min-height: 70vh;
+    }
+    
+    .problematiche,
+    .servizi,
+    .benefici {
+        padding: 3rem 1rem;
+    }
+    
+    .cta-ariasana {
+        padding: 3rem 1rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .btn-cta {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .problemi-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .servizio-content {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .problema-card,
+    .servizio-content {
+        padding: 1.5rem;
+    }
+    
+    .beneficio-item {
+        padding: 1rem;
+    }
+}
+
+/* Sezione Prodotti */
+.prodotti {
+    padding: 5rem 2rem;
+    background: #f8fbff;
+}
+
+.prodotti-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.prodotto-card {
+    display: flex;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.1);
+    transition: all 0.3s ease;
+    align-items: center;
+}
+
+.prodotto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 188, 212, 0.15);
+}
+
+
+
+.prodotto-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+.prodotto-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prodotto-content {
+    flex: 2;
+    padding: 2rem;
+}
+
+.prodotto-content h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #001a33;
+    margin-bottom: 1rem;
+}
+
+.prodotto-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.prodotto-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.prodotto-content li {
+    padding: 0.5rem 0;
+    color: #666;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.prodotto-content li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .prodotti {
+        padding: 3rem 1rem;
+    }
+    .prodotto-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .prodotto-image {
+        max-width: 100%;
+    }
+    .prodotto-image img {
+        border-radius: 15px 15px 0 0;
+    }
+    .prodotto-content {
+        padding: 1.5rem;
+    }
+}
+
+/* Stili per Kaltech.html */
+.kaltech-detail-hero {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #f0f8ff 0%, #e8f4fd 100%);
+    display: flex;
+    align-items: center;
+}
+
+.kaltech-detail-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.kaltech-detail-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.kaltech-detail-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 188, 212, 0.2);
+}
+
+.kaltech-detail-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.kaltech-detail-text h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: #001a33;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.kaltech-detail-text .slogan {
+    font-size: 1.3rem;
+    color: #00bcd4;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.kaltech-detail-text p {
+    font-size: 1.1rem;
+    color: #2c5282;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4caf50;
+}
+
+.buy-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.buy-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.key-features {
+    background: #e0f7fa;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid #00bcd4;
+}
+
+.key-features h3 {
+    font-size: 1.5rem;
+    color: #001a33;
+    margin-bottom: 1.5rem;
+}
+
+.key-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.key-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    color: #2c5282;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.key-features li i {
+    color: #00bcd4;
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+}
+
+.kaltech-specs {
+    padding: 5rem 2rem;
+    background: #fff;
+}
+
+.kaltech-specs h2 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: #001a33;
+    margin-bottom: 3.5rem;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.spec-item {
+    background: #f8fbff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #e0f7fa;
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.05);
+}
+
+.spec-item h4 {
+    font-size: 1.2rem;
+    color: #001a33;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.spec-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.kaltech-how-it-works {
+    padding: 5rem 2rem;
+    background: linear-gradient(180deg, #e3f2fd 0%, #f1f8e9 100%);
+}
+
+.kaltech-how-it-works h2 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: #001a33;
+    margin-bottom: 1.5rem;
+}
+
+.kaltech-how-it-works p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 3.5rem;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.step-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.step-card i {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    margin-bottom: 1.5rem;
+}
+
+.step-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #001a33;
+    margin-bottom: 1rem;
+}
+
+.step-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+@media (max-width: 992px) {
+    .kaltech-detail-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    .kaltech-detail-text {
+        max-width: 100%;
+    }
+    .price-section {
+        justify-content: center;
+    }
+    .key-features {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .kaltech-detail-hero,
+    .kaltech-specs,
+    .kaltech-how-it-works {
+        padding: 3rem 1rem;
+    }
+    .kaltech-detail-text h1 {
+        font-size: 2rem;
+    }
+    .price {
+        font-size: 2rem;
+    }
+    .buy-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+    .kaltech-specs h2,
+    .kaltech-how-it-works h2 {
+        font-size: 1.8rem;
+    }
+    .specs-grid,
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+/* Nuovi stili per le sezioni prodotto */
+.product-sections {
+    margin-top: 3rem;
+}
+
+.product-category {
+    margin-bottom: 4rem;
+}
+
+.product-category h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #001a33;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.product-category h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #00bcd4, #4fc3f7);
+    border-radius: 2px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Aggiornamento stili per .prodotto-card */
+.prodotti .prodotto-card {
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 1px solid #f0f0f0;
+}
+
+.prodotti .prodotto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.prodotti .prodotto-image {
+    max-width: 100%;
+    height: 200px; /* Altezza fissa per le immagini */
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.prodotti .prodotto-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assicura che l'immagine copra l'area */
+    border-radius: 15px 15px 0 0;
+}
+
+.prodotti .prodotto-content {
+    padding: 1.5rem;
+    flex: none; /* Rimuove flex-grow */
+    width: 100%;
+}
+
+.prodotti .prodotto-content h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #001a33;
+    margin-bottom: 0.8rem;
+}
+
+.prodotti .prodotto-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.prodotti .prodotto-content .btn-secondary {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* Media Queries per responsività */
+@media (max-width: 768px) {
+    .product-category h3 {
+        font-size: 1.8rem;
+    }
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+/* Layout specifico per Kaltech: 3 riquadri sopra, 2 sotto */
+#kaltech .category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center; /* Centra l'intera griglia se non occupa tutta la larghezza */
+}
+
+#kaltech .category-grid .prodotto-card:nth-child(4),
+#kaltech .category-grid .prodotto-card:nth-child(5) {
+    grid-column: span 1; /* Occupano una colonna ciascuno */
+    max-width: 300px; /* Limita la larghezza per non farlo espandere troppo */
+}
+
+/* Nuovo contenitore per centrare gli ultimi due elementi affiancati */
+#kaltech .category-grid-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    grid-column: 1 / -1; /* Occupa tutte le colonne della griglia principale */
+    margin-top: 2rem; /* Spazio tra la prima riga e la seconda */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #kaltech .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #kaltech .category-grid .prodotto-card:nth-child(4),
+    #kaltech .category-grid .prodotto-card:nth-child(5) {
+        grid-column: span 1; /* Occupano 1 colonna */
+        max-width: 300px; /* Mantieni la larghezza massima */
+    }
+}
+
+@media (max-width: 768px) {
+    #kaltech .category-grid {
+        grid-template-columns: 1fr;
+    }
+    #kaltech .category-grid .prodotto-card:nth-child(4),
+    #kaltech .category-grid .prodotto-card:nth-child(5) {
+        grid-column: span 1; /* Occupano 1 colonna */
+        max-width: none; /* Rimuovi la larghezza massima */
+    }
+}

@@ -1,0 +1,397 @@
+/* =================================== */
+/*        STILI SPECIFICI BLOG         */
+/* =================================== */
+
+/* Sezione Hero del Blog */
+.blog-hero {
+    background: linear-gradient(rgba(0, 34, 68, 0.85), rgba(0, 34, 68, 0.85)), url('images/blog-bg.jpg') center center / cover no-repeat;
+    padding: 5rem 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.blog-hero-content h1 {
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.blog-hero-content p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Sezione Contenuto Blog */
+.blog-content {
+    padding: 5rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.blog-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Stili per gli Articoli */
+.blog-article {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 85, 165, 0.1);
+    margin-bottom: 4rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.blog-article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 85, 165, 0.15);
+}
+
+.article-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-article:hover .article-image img {
+    transform: scale(1.05);
+}
+
+.article-content {
+    padding: 2.5rem;
+}
+
+.article-content h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #002244;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.article-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.article-date,
+.article-category {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.article-date i,
+.article-category i {
+    color: #0055a5;
+    font-size: 1rem;
+}
+
+.article-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 1.2rem;
+}
+
+.article-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #002244;
+    margin: 2rem 0 1rem 0;
+    border-left: 4px solid #f0b02e;
+    padding-left: 1rem;
+}
+
+.article-content ul {
+    margin: 1.2rem 0;
+    padding-left: 1.5rem;
+}
+
+.article-content li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.article-content li::marker {
+    color: #0055a5;
+}
+
+/* Effetti di Hover e Animazioni */
+.blog-article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.blog-article:hover::before {
+    left: 100%;
+}
+
+/* Responsività per il Blog */
+@media (max-width: 768px) {
+    .blog-hero {
+        padding: 4rem 1rem;
+    }
+    
+    .blog-content {
+        padding: 3rem 1rem;
+    }
+    
+    .article-content {
+        padding: 2rem;
+    }
+    
+    .article-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .article-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .article-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-hero {
+        padding: 3rem 1rem;
+    }
+    
+    .blog-content {
+        padding: 2rem 1rem;
+    }
+    
+    .article-content {
+        padding: 1.5rem;
+    }
+    
+    .article-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .article-image {
+        height: 200px;
+    }
+    
+    .blog-article {
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* Animazioni per il caricamento degli articoli */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blog-article {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.blog-article:nth-child(1) { animation-delay: 0.1s; }
+.blog-article:nth-child(2) { animation-delay: 0.2s; }
+.blog-article:nth-child(3) { animation-delay: 0.3s; }
+.blog-article:nth-child(4) { animation-delay: 0.4s; }
+.blog-article:nth-child(5) { animation-delay: 0.5s; }
+
+/* Stili per migliorare la leggibilità */
+.article-content p:first-of-type {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.article-content p:first-of-type::first-letter {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #0055a5;
+    float: left;
+    line-height: 1;
+    margin-right: 0.1em;
+    margin-top: 0.1em;
+}
+
+/* Separatore visivo tra articoli */
+.blog-article:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #0055a5, #f0b02e);
+    margin: 3rem auto 0;
+    border-radius: 2px;
+}
+
+/* Stili per evidenziare le citazioni o box informativi */
+.article-content blockquote {
+    background-color: #f0f4f8;
+    border-left: 4px solid #0055a5;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: #555;
+}
+
+/* Miglioramenti per l'accessibilità */
+.article-content a {
+    color: #0055a5;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.article-content a:hover {
+    color: #f0b02e;
+}
+
+.article-content a:focus {
+    outline: 2px solid #0055a5;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+
+/* Stili per i pulsanti di azione degli articoli */
+.article-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.download-btn,
+.video-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: none;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* DOWNLOAD button: blue gradient */
+.download-btn {
+    background: linear-gradient(135deg, #007BFF, #00C6FF);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+/* VIDEO button: orange gradient */
+.video-btn {
+    background: linear-gradient(135deg, #f0b02e, #f78f1e);
+    box-shadow: 0 0 10px rgba(240, 176, 46, 0.4);
+    color: #fff;
+}
+
+/* Hover Effects */
+.download-btn:hover,
+.video-btn:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+}
+
+/* Icon animation */
+.download-btn i,
+.video-btn i {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.download-btn:hover i,
+.video-btn:hover i {
+    transform: scale(1.3) rotate(10deg);
+}
+
+/* Glowing border */
+.download-btn::before,
+.video-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    padding: 2px;
+    background: inherit;
+    z-index: -1;
+    filter: blur(5px);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.download-btn:hover::before,
+.video-btn:hover::before {
+    opacity: 1;
+}
+
+
+/* Responsività per i pulsanti di azione */
+@media (max-width: 480px) {
+    .article-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .download-btn,
+    .video-btn {
+        justify-content: center;
+        padding: 0.875rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Aggiornamento delle animazioni per includere i nuovi articoli */
+.blog-article:nth-child(6) { animation-delay: 0.6s; }
+.blog-article:nth-child(7) { animation-delay: 0.7s; }
+.blog-article:nth-child(8) { animation-delay: 0.8s; }
+.blog-article:nth-child(9) { animation-delay: 0.9s; }
+
+.download-btn,
+.video-btn {
+    text-decoration: none !important;
+}

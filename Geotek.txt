@@ -1,0 +1,204 @@
+prodotti
+Kaltek   
+   |
+modello1   modello2
+
+Meltem (catalogo)
+   |
+modello1    modelloo2
+
+Helty (catalogo)
+   |
+modell     modello 
+
+Opzione B – Tutti insieme ma con etichette
+
+Ogni scheda prodotto ha un badge colorato:
+
+🛒 Disponibile online 
+
+📞 Solo su richiesta  ( o tipo contattaci)
+
+E un bottone diverso:
+
+“Aggiungi al carrello” per gli online  ( o aquista ora) 
+
+“Contattaci per acquistare” per gli altri
+
+
+
+
+
+account Instagram 
+
+geotekariasana geotekediliziasalute           più avanti - geotekimmobiliare
+
+logo + onda + 
+
+
+è normale che quando vado su wordpress admin e in pagine non vedo la pagina home che vedo in http://localhost/wordpress/?
+
+
+
+
+UTENTE STEFANO VERDE HAI LA CRONOLOGIA PER FARE EDILIZA
+
+
+
+
+ChatGPT ha detto:
+Sì, è normale non vedere una pagina chiamata “Home” nell’elenco delle pagine in WordPress se quella “home” non è una pagina statica creata manualmente.
+
+ l'importante è che io riesca comunque a esportarlo in un wordpress di un altro utennte
+Metodo 1: Usare un plugin di migrazione (es. All-in-One WP Migration)
+Vantaggi:
+
+Facile e veloce.
+
+Copia tutto: temi, plugin, database, media.
+
+Non serve conoscere il database manualmente.
+
+Passi:
+
+Sul sito di origine (localhost XAMPP):
+
+Vai su Plugin > Aggiungi nuovo.
+
+Cerca All-in-One WP Migration, installalo e attivalo.
+
+Vai su All-in-One WP Migration > Export.
+
+Clicca su Export To > File e scarica il file di backup.
+
+Sul sito di destinazione (nuovo WordPress):
+
+Installa e attiva lo stesso plugin.
+
+Vai su All-in-One WP Migration > Import.
+
+Carica il file di backup esportato prima.
+
+Segui la procedura per completare l’importazione.
+
+Dopo l’importazione, il sito sarà identico a quello di origine.
+
+Metodo 2: Esportare/Importare contenuti + tema + plugin manualmente
+Vantaggi:
+
+Controllo più granulare.
+
+Buono se vuoi solo portare contenuti e tema personalizzato.
+
+Passi:
+
+Esporta i contenuti (post, pagine, media):
+
+In WordPress Admin > Strumenti > Esporta seleziona “Tutti i contenuti” e scarica il file XML.
+
+Nel nuovo sito:
+
+Vai in Strumenti > Importa, scegli WordPress e carica il file XML.
+
+Esporta e reinstalla il tema personalizzato:
+
+Se il tema è custom, prendi la cartella tema da wp-content/themes sul vecchio sito e installala nel nuovo tramite FTP o creando un pacchetto ZIP da caricare.
+
+Installa i plugin necessari manualmente.
+Metodo 1: Esportare e importare i contenuti con il file XML
+Passo 1: Esportare i contenuti dal WordPress locale
+Accedi al tuo WordPress locale (es. http://localhost/wordpress/wp-admin).
+
+Nel menu a sinistra, vai su Strumenti > Esporta.
+
+Scegli cosa esportare:
+
+Se vuoi esportare tutti i contenuti (pagine, articoli, media, menu, commenti, ecc.), seleziona Tutti i contenuti.
+
+Se vuoi esportare solo alcune parti (es. solo le pagine o solo gli articoli), scegli quello che ti serve.
+
+Clicca su Scarica file di esportazione.
+
+Salva il file XML generato sul tuo computer.
+
+Passo 2: Importare i contenuti nel nuovo WordPress
+Accedi al WordPress del nuovo utente (quello dove vuoi trasferire il sito).
+
+Nel menu a sinistra, vai su Strumenti > Importa.
+
+Seleziona la voce WordPress (se non è già installato, ti chiederà di installare il plugin “WordPress Importer”).
+
+Clicca su Installa ora e poi su Attiva plugin e esegui importatore.
+
+Carica il file XML che hai esportato dal tuo sito locale.
+
+Durante l'importazione ti verrà chiesto:
+
+Se vuoi assegnare i contenuti a un autore esistente o crearne uno nuovo.
+
+Se vuoi importare anche gli allegati (media, immagini). Assicurati di spuntare questa opzione per importare le immagini.
+
+Avvia l’importazione.
+
+Passo 3: Controlla e sistema
+Una volta importato, controlla che pagine, articoli, immagini e menu siano presenti.
+
+Potrebbe essere necessario riconfigurare alcuni plugin o temi (installare il tema o plugin usati prima).
+
+Se usi menu personalizzati, ricontrolla il menu in Aspetto > Menu e assegnalo alle posizioni corrette.
+
+Se vuoi, ti posso poi guidare anche per trasferire l’intero sito con database e file (metodo più avanzato) — fammi sapere!
+
+Ti serve che ti prepari un PDF con la guida o preferisci direttamente il testo qui?
+
+
+
+
+
+
+
+
+Hai detto:
+si fammi vedere grazie
+
+
+ChatGPT ha detto:
+Ecco una guida chiara e ordinata in stile PDF, ma te la lascio qui in testo che puoi copiare/incollare o salvare come preferisci:
+
+Guida passo passo per esportare/importare contenuti WordPress con file XML
+Passo 1: Esportare i contenuti dal sito WordPress originale
+Accedi al pannello di amministrazione WordPress del sito originale.
+
+Dal menu laterale, clicca su Strumenti > Esporta.
+
+Scegli Tutti i contenuti per esportare pagine, articoli, media, commenti, menu, ecc.
+
+Clicca su Scarica file di esportazione per scaricare il file .xml.
+
+Salva il file in una cartella sul tuo computer.
+
+Passo 2: Importare i contenuti nel nuovo sito WordPress
+Accedi al pannello di amministrazione WordPress del nuovo sito.
+
+Dal menu laterale, clicca su Strumenti > Importa.
+
+Scegli l’opzione WordPress (se non è presente, clicca su Installa ora per installare il plugin “WordPress Importer”).
+
+Dopo l’installazione, clicca su Attiva plugin e esegui importatore.
+
+Nella schermata di importazione, carica il file .xml che hai esportato dal sito originale.
+
+Seleziona se vuoi assegnare i contenuti a un autore esistente o crearne uno nuovo.
+
+Assicurati di spuntare Importa allegati per importare immagini e media.
+
+Avvia l’importazione.
+
+Passo 3: Verifica e configura
+Controlla che pagine, articoli e media siano stati importati correttamente.
+
+Verifica il menu e assegnalo alle posizioni corrette in Aspetto > Menu.
+
+Installa e attiva il tema e i plugin usati nel sito originale se necessario.
+
+Personalizza eventuali impostazioni mancanti.

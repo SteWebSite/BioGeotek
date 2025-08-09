@@ -1,0 +1,619 @@
+/* Product Detail Pages CSS */
+
+/* Container and Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 20px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Product Hero Section */
+.product-hero {
+    padding: 40px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    margin-bottom: 60px;
+}
+
+.product-hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-info h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-subtitle {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.product-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.highlight {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.highlight-text {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Sections */
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Specifications */
+.specifications-section {
+    background: #f8f9fa;
+    padding: 60px 0;
+    border-radius: 12px;
+}
+
+.specs-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.spec-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px 20px;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+}
+
+.spec-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.spec-value {
+    color: #666;
+    text-align: right;
+}
+
+/* Applications Grid */
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.application-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.application-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.application-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.application-item p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Certifications */
+.certifications-section {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    padding: 60px 0;
+    border-radius: 12px;
+    margin-bottom: 60px;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.certification-item {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.cert-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.certification-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.certification-item p {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Energy Efficiency */
+.energy-efficiency-section {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.climate-ratings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.climate-item {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.climate-type {
+    font-weight: 600;
+    color: #333;
+}
+
+.energy-class {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+}
+
+.energy-class.a-plus {
+    background: #28a745;
+}
+
+.energy-class.a {
+    background: #17a2b8;
+}
+
+.energy-class.e {
+    background: #ffc107;
+    color: #333;
+}
+
+.sec-value {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Performance Comparison */
+.performance-comparison {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.comparison-chart {
+    display: grid;
+    gap: 30px;
+}
+
+.chart-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.chart-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.performance-bar {
+    position: relative;
+    height: 30px;
+    background: #e9ecef;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+    border-radius: 15px;
+    position: relative;
+    transition: width 0.8s ease;
+}
+
+.percentage {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Maintenance Section */
+.maintenance-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.maintenance-feature {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.maintenance-feature h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.maintenance-feature p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Package Contents */
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.package-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 0.95rem;
+    color: #666;
+    border-left: 4px solid #007bff;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    padding: 60px 40px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: white;
+    color: #007bff;
+}
+
+.btn-primary:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #007bff;
+    transform: translateY(-2px);
+}
+
+/* Premium Features for FlowELITE */
+.premium-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.premium-feature {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #007bff;
+}
+
+.premium-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.led-specs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.led-specs span {
+    background: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Color Trust */
+.color-indicators {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.color-indicator {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.color-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.color-dot.green {
+    background: #28a745;
+}
+
+.color-dot.yellow {
+    background: #ffc107;
+}
+
+.color-dot.red {
+    background: #dc3545;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .product-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .applications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .climate-ratings {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .product-info h1 {
+        font-size: 2rem;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .product-hero {
+        padding: 20px 0;
+    }
+    
+    .product-info h1 {
+        font-size: 1.8rem;
+    }
+    
+    .highlight {
+        padding: 15px;
+    }
+    
+    .highlight-number {
+        font-size: 1.5rem;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+    
+    .cta-section {
+        padding: 40px 20px;
+    }
+}
+

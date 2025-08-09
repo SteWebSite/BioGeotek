@@ -1,0 +1,236 @@
+/* =================================== */
+/*      STILI SPECIFICI CHI SIAMO      */
+/* =================================== */
+
+/* Sezione Hero della pagina chi siamo */
+.about-hero {
+  background: linear-gradient(rgba(0, 34, 68, 0.85), rgba(0, 34, 68, 0.85)), url('images/about-bg.jpg') center center / cover no-repeat;
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.about-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-hero h1 {
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+}
+
+/* Sezione Introduttiva */
+.about-intro {
+  padding: 5rem 2rem;
+  background: #fff;
+}
+
+.intro-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.intro-text h2 {
+  font-size: 2rem;
+  color: #002244;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Sezione Servizi */
+.about-services {
+  padding: 5rem 2rem;
+  background: #f8f9fa;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-item {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 85, 165, 0.08);
+  transition: all 0.3s ease;
+  border-top: 3px solid transparent;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 85, 165, 0.15);
+  border-top-color: #0055a5;
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #0055a5, #003d7a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 2rem;
+}
+
+.service-item h3 {
+  font-size: 1.3rem;
+  color: #002244;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.service-item p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Sezione Valori */
+.about-values {
+  padding: 5rem 2rem;
+  background: white;
+}
+
+.values-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.values-text h2 {
+  font-size: 2rem;
+  color: #002244;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.value-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.value-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.value-item:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.value-item i {
+  font-size: 2rem;
+  color: #0055a5;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.value-item h4 {
+  font-size: 1.2rem;
+  color: #002244;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.value-item p {
+  color: #555;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Container comune */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 4rem 1rem;
+  }
+  
+  .about-intro,
+  .about-services,
+  .about-values {
+    padding: 3rem 1rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .value-list {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .value-item {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 3rem 1rem;
+  }
+  
+  .about-intro,
+  .about-services,
+  .about-values {
+    padding: 2rem 1rem;
+  }
+  
+  .service-item {
+    padding: 2rem 1.5rem;
+  }
+  
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
+

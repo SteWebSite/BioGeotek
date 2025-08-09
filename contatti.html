@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contatti - BioGeotek</title>
+  
+  <!-- 1. Stili Globali del Sito -->
+  <link rel="stylesheet" href="design.css"/>
+  <!-- 2. Stili Specifici di questa Pagina -->
+  <link rel="stylesheet" href="contatti.css"/>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Logo" class="logo" />
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="AriaSana.html">GeotekAriaSana</a>    
+        <a href="/geotekedilizia-salute">GeotekEdilizia&Salute</a>
+        <a href="/novita">Novità</a>
+        <a href="blog.html">Blog</a>
+        <a href="contatti.html" class="active">Contatti</a>
+        <a href="chi-siamo.html">Chi siamo</a>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="contact-hero-content">
+        <h1>Entra in Contatto con Noi</h1>
+        <p>Siamo qui per rispondere a ogni tua domanda. Compila il modulo o utilizza i nostri contatti diretti per richiedere una consulenza gratuita.</p>
+      </div>
+    </section>
+
+    <section class="contact-main">
+      <div class="contact-container">
+        <!-- Colonna Sinistra: Info -->
+        <div class="contact-info">
+          <h2>Informazioni di Contatto</h2>
+          <p>Non esitare a chiamarci o a venirci a trovare. Il nostro team di esperti è a tua completa disposizione.</p>
+          
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Telefono</h4>
+              <a href="tel:0516814689">051 681 4689</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:info@biogeotek.it">info@biogeotek.it</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Indirizzo</h4>
+              <p>Via Zanarini, 7 – Sala Bolognese (BO )</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>Orari di Apertura</h4>
+              <p>Lun – Ven: 8:30 – 18:00  
+Sabato: 8:30 – 12:30</p>
+            </div>
+          </div>
+
+          <div class="contact-map">
+             <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2844.572823066314!2d11.24904131550511!3d44.56305117909859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd984591df0b3%3A0xe9ef147caa996bb7!2sVia%20Zanarini%207%2C%2040000%20Sala%20Bolognese%20BO!5e0!3m2!1sit!2sit!4v1690886868999!5m2!1sit!2sit"
+                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Mappa Via Zanarini, Sala Bolognese"></iframe>
+          </div>
+        </div>
+
+        <!-- Colonna Destra: Form -->
+        <div class="contact-form-wrapper">
+  <h2>Richiedi una Consulenza Gratuita</h2>
+  <form action="https://formspree.io/f/xdkdwrqz" method="POST" class="contact-form">
+    <div class="form-group">
+      <label for="name">Nome e Cognome</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Telefono (Opzionale)</label>
+      <input type="tel" id="phone" name="phone">
+    </div>
+    <div class="form-group">
+      <label for="message">Il tuo messaggio</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+    </div>
+    <div class="form-group-checkbox">
+      <input type="checkbox" id="privacy" name="privacy" required>
+      <label for="privacy">Ho letto e accetto la <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>.</label>
+    </div>
+
+    <!-- Campo opzionale per personalizzare l'oggetto -->
+    <input type="hidden" name="_subject" value="Nuova richiesta da BioGeotek">
+
+    <button type="submit" class="btn">Invia Richiesta</button>
+  </form>
+</div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-info">
+      <!-- ... il tuo footer ... -->
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
