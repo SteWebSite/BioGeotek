@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaltech KL-W01E - Purificatore d'Aria Fotocatalitico | AriaSana</title>
+    <title>Kaltech KL-W01 - Purificatore d'Aria Fotocatalitico | AriaSana</title>
+    <!-- Assicurati di collegare il file CSS corretto -->
     <link rel="stylesheet" href="design.css">
     <link rel="stylesheet" href="paymant.css">
 </head>
@@ -27,36 +28,96 @@
     </div>
   </header>
 
-            <!-- Hero Section -->
-            <section class="product-hero">
-                <div class="product-hero-content">
-                    <div class="product-image">
-                        <img src="AriaSANA/kaltech/w01e/1.jpg" alt="Kaltech KL-W01E Purificatore d'Aria Fotocatalitico">
-                    </div>
-                    <div class="product-info">
-                        <h1>Kaltech KL-W01E</h1>
-                        <p class="product-subtitle">Purificatore d'Aria Fotocatalitico a Parete</p>
-                        <p class="product-description">
-                            Il primo purificatore d'aria al mondo che utilizza esclusivamente la tecnologia fotocatalitica, 
-                            senza filtri di adsorbimento. Design ultra-sottile da parete con potente capacità di riduzione degli odori.
-                        </p>
-                        <div class="product-highlights">
-                            <div class="highlight">
-                                <span class="highlight-number">25m²</span>
-                                <span class="highlight-text">Superficie applicabile (60 min)</span>
-                            </div>
-                            <div class="highlight">
-                                <span class="highlight-number">83mm</span>
-                                <span class="highlight-text">Spessore ultra-sottile</span>
-                            </div>
-                            <div class="highlight">
-                                <span class="highlight-number">20dB</span>
-                                <span class="highlight-text">Modalità silenziosa</span>
-                            </div>
-                        </div>
-                    </div>
+<main>
+
+            <!-- Incolla questo codice nel tuo file HTML, sostituendo la vecchia sezione <section class="kaltech-detail-hero"> -->
+
+<!-- Sostituisci la vecchia sezione hero con questa nuova struttura -->
+<div class="product-page-container">
+    <section class="product-purchase-section">
+        <!-- Colonna Galleria Immagini -->
+        <div class="product-gallery-new">
+            <div class="thumbnails-new">
+                <!-- Sostituisci i percorsi delle immagini -->
+                <img src="AriaSana/Kaltech/W01e/1.avif" alt="Miniatura 1" class="thumbnail-new active" onclick="changeImageNew('AriaSana/Kaltech/W01e/1.avif, this)">
+                <img src="https://placehold.co/100x100/00bcd4/ffffff?text=2" alt="Miniatura 2" class="thumbnail-new" onclick="changeImageNew('https://placehold.co/600x600/00bcd4/ffffff?text=Prodotto+2', this)">
+                <img src="https://placehold.co/100x100/003366/ffffff?text=3" alt="Miniatura 3" class="thumbnail-new" onclick="changeImageNew('https://placehold.co/600x600/003366/ffffff?text=Dettaglio+3', this)">
+                <img src="https://placehold.co/100x100/ff6b6b/ffffff?text=4" alt="Miniatura 4" class="thumbnail-new" onclick="changeImageNew('https://placehold.co/600x600/ff6b6b/ffffff?text=Funzione+4', this)">
+            </div>
+            <div class="main-image-new">
+                <img src="AriaSana/Kaltech/W01e/1.avif" alt="Prodotto vista principale" id="mainProductImageNew">
+            </div>
+        </div>
+
+        <!-- Colonna Dettagli e Acquisto -->
+        <div class="product-details-new">
+            <span class="product-brand">KALTECH</span>
+            <h1>KL-W01 EC Purificatore Fotocatalitico ai Carboni Attivi</h1>
+            <div class="product-reviews-summary">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="product-short-desc">
+                Elimina virus, batteri, odori e VOC con la tecnologia fotocatalitica brevettata. Silenzioso, senza filtri da sostituire e dal design elegante.
+            </p>
+            <div class="product-price-new">€699,00</div>
+            
+            <button class="btn-buy-main">Acquista</button>
+
+            <div class="trust-badges">
+                <ul>
+                    <li><i class="fas fa-shield-alt"></i> Pagamento sicuro al 100%</li>
+                    <li><i class="fas fa-truck"></i> Spedizione Gratuita e Veloce</li>
+                    <li><i class="fas fa-undo"></i> Reso Garantito entro 30 giorni</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Inserisci questo script prima della chiusura del tag </body> -->
+<script>
+    function changeImageNew(newSrc, clickedThumbnail) {
+        document.getElementById('mainProductImageNew').src = newSrc;
+        
+        const thumbnails = document.querySelectorAll('.thumbnail-new');
+        thumbnails.forEach(thumb => thumb.classList.remove('active'));
+        clickedThumbnail.classList.add('active');
+    }
+</script>
+<!-- Hero Section -->
+<section class="product-hero">
+    <div class="product-hero-content">
+        <div class="product-image">
+            <img src="images/kaltech-w01e.jpg" alt="Kaltech KL-W01E Purificatore d'Aria Fotocatalitico">
+        </div>
+        <div class="product-info">
+            <h1>Kaltech KL-W01E</h1>
+            <p class="product-subtitle">Purificatore d'Aria Fotocatalitico da Parete</p>
+            <p class="product-description">
+                Elimina virus, batteri, odori e VOC con la tecnologia fotocatalitica brevettata. 
+                Silenzioso, senza filtri da sostituire e dal design elegante che si adatta a qualsiasi ambiente.
+            </p>
+            <div class="product-highlights">
+                <div class="highlight">
+                    <span class="highlight-number">25m²</span>
+                    <span class="highlight-text">Copertura in 60 minuti</span>
                 </div>
-            </section>
+                <div class="highlight">
+                    <span class="highlight-number">20dB</span>
+                    <span class="highlight-text">Modalità silenziosa</span>
+                </div>
+                <div class="highlight">
+                    <span class="highlight-number">3kg</span>
+                    <span class="highlight-text">Peso</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
             <!-- Caratteristiche Principali -->
             <section class="features-section">
@@ -184,4 +245,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

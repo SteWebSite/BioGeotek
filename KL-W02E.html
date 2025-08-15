@@ -26,6 +26,54 @@
       </div>
     </div>
   </header>
+
+<main>
+
+<!-- Sezione di acquisto prodotto -->
+<div class="product-page-container">
+    <section class="product-purchase-section">
+        <!-- Colonna Galleria Immagini -->
+        <div class="product-gallery-new">
+            <div class="thumbnails-new">
+                <img src="AriaSana/Kaltech/W02e/1.png" alt="Kaltech KL-W02E vista principale" class="thumbnail-new active" onclick="changeImageNew('AriaSana/Kaltech/W02e/1.png', this)">
+                <img src="AriaSana/Kaltech/W02e/2.webp" alt="Kaltech KL-W02E dettaglio" class="thumbnail-new" onclick="changeImageNew('AriaSana/Kaltech/W02e/2.webp', this)">
+                <img src="AriaSana/Kaltech/W02e/3.png" alt="Kaltech KL-W02E installazione" class="thumbnail-new" onclick="changeImageNew('AriaSana/Kaltech/W02e/3.png', this)">
+                <img src="images/kaltech-w02e-4.jpg" alt="Kaltech KL-W02E ambiente" class="thumbnail-new" onclick="changeImageNew('images/kaltech-w02e-4.jpg', this)">
+            </div>
+            <div class="main-image-new">
+                <img src="AriaSana/Kaltech/W02e/1.png" alt="Kaltech KL-W02E vista principale" id="mainProductImageNew">
+            </div>
+        </div>
+
+        <!-- Colonna Dettagli e Acquisto -->
+        <div class="product-details-new">
+            <span class="product-brand">KALTECH</span>
+            <h1>KL-W02E</h1>
+            <div class="product-reviews-summary">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="product-short-desc">
+                Versione commerciale avanzata con prestazioni migliorate del 50% rispetto al KL-W01. Progettato per spazi commerciali più ampi con tecnologia fotocatalitica di nuova generazione.
+            </p>
+            <div class="product-price-new">€899,00</div>
+            
+            <button class="btn-buy-main">Acquista</button>
+
+            <div class="trust-badges">
+                <ul>
+                    <li><i class="fas fa-shield-alt"></i> Pagamento sicuro al 100%</li>
+                    <li><i class="fas fa-truck"></i> Spedizione Gratuita e Veloce</li>
+                    <li><i class="fas fa-undo"></i> Reso Garantito entro 30 giorni</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
             <!-- Hero Section -->
             <section class="product-hero">
                 <div class="product-hero-content">
@@ -239,6 +287,17 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- Script per il cambio immagini della galleria prodotto -->
+    <script>
+        function changeImageNew(newSrc, clickedThumbnail) {
+            document.getElementById('mainProductImageNew').src = newSrc;
+            
+            const thumbnails = document.querySelectorAll('.thumbnail-new');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            clickedThumbnail.classList.add('active');
+        }
+    </script>
 </body>
 </html>
 

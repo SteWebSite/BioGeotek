@@ -26,6 +26,54 @@
       </div>
     </div>
   </header>
+
+<main>
+
+<!-- Sezione di acquisto prodotto -->
+<div class="product-page-container">
+    <section class="product-purchase-section">
+        <!-- Colonna Galleria Immagini -->
+        <div class="product-gallery-new">
+            <div class="thumbnails-new">
+                <img src="AriaSana/Kaltech/P02/1.jpg" alt="Kaltech P02 MY AIR vista principale" class="thumbnail-new active" onclick="changeImageNew('AriaSana/Kaltech/P02/1.jpg', this)">
+                <img src="AriaSana/Kaltech/P02/2.jpg" alt="Kaltech P02 MY AIR dettaglio" class="thumbnail-new" onclick="changeImageNew('AriaSana/Kaltech/P02/2.jpg', this)">
+                <img src="AriaSana/Kaltech/P02/3.jpg" alt="Kaltech P02 MY AIR in uso" class="thumbnail-new" onclick="changeImageNew('AriaSana/Kaltech/P02/3.jpg', this)">
+                <img src="AriaSana/Kaltech/P02/4.jpg" alt="Kaltech P02 MY AIR accessori" class="thumbnail-new" onclick="changeImageNew('AriaSana/Kaltech/P02/4.jpg', this)">
+            </div>
+            <div class="main-image-new">
+                <img src="AriaSana/Kaltech/P02/1.jpg" alt="Kaltech P02 MY AIR vista principale" id="mainProductImageNew">
+            </div>
+        </div>
+
+        <!-- Colonna Dettagli e Acquisto -->
+        <div class="product-details-new">
+            <span class="product-brand">KALTECH</span>
+            <h1>P02 MY AIR</h1>
+            <div class="product-reviews-summary">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="product-short-desc">
+                Il primo purificatore d'aria personale al mondo che utilizza la tecnologia fotocatalitica. Indossabile come un pendente, purifica l'aria intorno al viso per una protezione personale continua.
+            </p>
+            <div class="product-price-new">€299,00</div>
+            
+            <button class="btn-buy-main">Acquista</button>
+
+            <div class="trust-badges">
+                <ul>
+                    <li><i class="fas fa-shield-alt"></i> Pagamento sicuro al 100%</li>
+                    <li><i class="fas fa-truck"></i> Spedizione Gratuita e Veloce</li>
+                    <li><i class="fas fa-undo"></i> Reso Garantito entro 30 giorni</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
             <!-- Hero Section -->
             <section class="product-hero">
                 <div class="product-hero-content">
@@ -289,6 +337,17 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- Script per il cambio immagini della galleria prodotto -->
+    <script>
+        function changeImageNew(newSrc, clickedThumbnail) {
+            document.getElementById('mainProductImageNew').src = newSrc;
+            
+            const thumbnails = document.querySelectorAll('.thumbnail-new');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            clickedThumbnail.classList.add('active');
+        }
+    </script>
 </body>
 </html>
 

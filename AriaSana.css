@@ -123,6 +123,43 @@
 .quality-indicator i {
     font-size: 1.2rem;
 }
+/* Badge prodotto */
+.prodotto-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 20px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.prodotto-badge.online {
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    color: white;
+}
+
+.prodotto-badge.consulenza {
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    color: white;
+}
+.btn-buy {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-buy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
 
 /* Sezione Problematiche */
 .problematiche {
@@ -165,14 +202,14 @@
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 26, 51, 0.08), 0 10px 30px rgba(0, 26, 51, 0.05);
     transition: all 0.3s ease;
     border: 1px solid #f0f0f0;
 }
 
 .problema-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(0, 26, 51, 0.12), 0 15px 40px rgba(0, 26, 51, 0.1);
 }
 
 .problema-icon {
@@ -217,13 +254,13 @@
     background: #fff;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.1);
+    box-shadow: 0 12px 35px rgba(0, 188, 212, 0.15);
     transition: all 0.3s ease;
 }
 
 .servizio-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 188, 212, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 188, 212, 0.2);
 }
 
 .servizio-card:nth-child(even) {
@@ -523,7 +560,8 @@
 /* Sezione Prodotti */
 .prodotti {
     padding: 5rem 2rem;
-    background: #f8fbff;
+    /* Sfondo più elaborato con un gradiente molto leggero per dare profondità */
+    background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
 }
 
 .prodotti-grid {
@@ -930,13 +968,22 @@
 .prodotti .prodotto-card {
     flex-direction: column;
     text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    border: 1px solid #f0f0f0;
+    /* Ombra più morbida e stratificata per un effetto di profondità professionale */
+    box-shadow: 0 4px 8px rgba(0, 26, 51, 0.05), 0 10px 25px rgba(0, 26, 51, 0.07);
+    /* Bordo trasparente per preparare lo spazio per il gradiente su hover, evitando scatti */
+    border: 2px solid transparent;
+    /* Sfondo con un gradiente quasi impercettibile per dare profondità */
+    background: #fff; /* Sfondo bianco per la parte dell'immagine */
+    /* Transizione più fluida e specifica per le proprietà animate */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);    border-radius: 15px; /* Assicura che il contenitore abbia i bordi arrotondati */
 }
 
 .prodotti .prodotto-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    /* Sollevamento più accentuato e ombra più definita al passaggio del mouse */
+    transform: translateY(-8px);
+    /* Ombra che riprende i colori del sito e bordo sfumato */
+    box-shadow: 0 8px 16px rgba(0, 188, 212, 0.1), 0 20px 40px rgba(0, 188, 212, 0.15);
+    border-image: linear-gradient(135deg, #00bcd4, #4fc3f7) 1;
 }
 
 .prodotti .prodotto-image {
@@ -956,19 +1003,21 @@
 .prodotti .prodotto-content {
     padding: 1.5rem;
     flex: none; /* Rimuove flex-grow */
-    width: 100%;
+    width: 100%;    /* Applica il gradiente solo alla sezione del contenuto */
+    background: linear-gradient(145deg, #002244, #003366);
+    border-radius: 0 0 13px 13px; /* Arrotonda solo gli angoli inferiori */
 }
 
 .prodotti .prodotto-content h4 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #001a33;
+    color: #ffffff; /* Testo bianco per contrasto sullo sfondo scuro */
     margin-bottom: 0.8rem;
 }
 
 .prodotti .prodotto-content p {
     font-size: 1rem;
-    color: #555;
+    color: #e0f7fa; /* Azzurro molto chiaro per il testo, più morbido del bianco puro */
     line-height: 1.5;
     margin-bottom: 1.5rem;
 }
