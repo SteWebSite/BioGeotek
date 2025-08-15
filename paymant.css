@@ -899,3 +899,192 @@
     z-index: 10;
     position: relative;
 }
+
+/* =================================== */
+/*   SELETTORE VARIANTI PRODOTTO       */
+/* =================================== */
+
+.product-variant-selector {
+    margin: 1.5rem 0 2rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8fbff 0%, #e8f4fd 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 188, 212, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-variant-selector::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00bcd4, #4fc3f7);
+}
+
+.product-variant-selector h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #001a33;
+    margin: 0 0 1rem 0;
+    text-align: center;
+}
+
+.variant-toggle {
+    display: flex;
+    background: #fff;
+    border-radius: 8px;
+    padding: 4px;
+    box-shadow: 0 4px 12px rgba(0, 26, 51, 0.08);
+    position: relative;
+}
+
+.variant-toggle input[type="radio"] {
+    display: none;
+}
+
+.variant-option {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.variant-option:hover {
+    background: rgba(0, 188, 212, 0.05);
+}
+
+.variant-name {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #001a33;
+    margin-bottom: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+.variant-desc {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Stile per l'opzione selezionata */
+.variant-toggle input[type="radio"]:checked + .variant-option {
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+    transform: translateY(-2px);
+}
+
+.variant-toggle input[type="radio"]:checked + .variant-option .variant-name {
+    color: white;
+}
+
+.variant-toggle input[type="radio"]:checked + .variant-option .variant-desc {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Animazione per il cambio di selezione */
+.variant-option {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Responsive per il selettore */
+@media (max-width: 768px) {
+    .product-variant-selector {
+        margin: 1rem 0 1.5rem 0;
+        padding: 1rem;
+    }
+    
+    .variant-toggle {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .variant-option {
+        padding: 0.8rem;
+    }
+    
+    .variant-name {
+        font-size: 0.95rem;
+    }
+    
+    .variant-desc {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-variant-selector h3 {
+        font-size: 1rem;
+    }
+    
+    .variant-name {
+        font-size: 0.9rem;
+    }
+    
+    .variant-desc {
+        font-size: 0.75rem;
+    }
+}
+
+/* =================================== */
+/*   MIGLIORAMENTI ANIMAZIONI          */
+/* =================================== */
+
+/* Animazione per il cambio di prezzo */
+#product-price {
+    transition: all 0.4s ease;
+}
+
+#product-price.price-changing {
+    transform: scale(1.05);
+    color: #00bcd4;
+}
+
+/* Animazione per il cambio di titolo */
+#product-title {
+    transition: all 0.3s ease;
+}
+
+/* Animazione per il cambio di descrizione */
+#product-description {
+    transition: all 0.3s ease;
+}
+
+/* Effetto hover migliorato per il pulsante acquista */
+.btn-buy-main {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-buy-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ee5a52, #ff6b6b);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.btn-buy-main:hover::before {
+    left: 0;
+}
+
+.btn-buy-main:active {
+    transform: translateY(-1px) scale(0.98);
+}
+

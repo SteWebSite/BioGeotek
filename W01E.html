@@ -39,20 +39,39 @@
         <div class="product-gallery-new">
             <div class="thumbnails-new">
                 <!-- Sostituisci i percorsi delle immagini -->
-                <img src="AriaSana/Kaltech/W01e/1.jpg" alt="Miniatura 1" class="thumbnail-new active" onclick="changeImageNew('AriaSana/Kaltech/W01e/1.jpg', this)">
-                <img src="AriaSana/Kaltech/W01e/2.jpg" alt="Miniatura 2" class="thumbnail-new" onclick="changeImageNew('AriaSana/Kaltech/W01e/2.jpg', this)">
-                <img src="AriaSana/Kaltech/W01e/3.jpg" alt="Miniatura 3" class="thumbnail-new" onclick="changeImageNew('AriaSana/Kaltech/W01e/3.jpg', this)">
-                <img src="AriaSana/Kaltech/W01e/4.jpg" alt="Miniatura 4" class="thumbnail-new" onclick="changeImageNew('AriaSana/Kaltech/W01e/4.jpg', this)">
+                <img src="kaltech/W01e/1.jpg" alt="Miniatura 1" class="thumbnail-new active" onclick="changeImageNew('kaltech/W01e/1.jpg', this)">
+                <img src="kaltech/W01e/2.jpg" alt="Miniatura 2" class="thumbnail-new" onclick="changeImageNew('kaltech/W01e/2.jpg', this)">
+                <img src="kaltech/W01e/3.jpg" alt="Miniatura 3" class="thumbnail-new" onclick="changeImageNew('kaltech/W01e/3.jpg', this)">
+                <img src="kaltech/W01e/4.jpg" alt="Miniatura 4" class="thumbnail-new" onclick="changeImageNew('kaltech/W01e/4.jpg', this)">
             </div>
             <div class="main-image-new">
-                <img src="AriaSana/Kaltech/W01e/1.jpg" alt="Prodotto vista principale" id="mainProductImageNew">
+                <img src="kaltech/W01e/1.jpg" alt="Prodotto vista principale" id="mainProductImageNew">
             </div>
         </div>
 
         <!-- Colonna Dettagli e Acquisto -->
         <div class="product-details-new">
             <span class="product-brand">KALTECH</span>
-            <h1>KL-W01 EC Purificatore Fotocatalitico ai Carboni Attivi</h1>
+            
+            <!-- Selettore Modello Prodotto -->
+            <div class="product-variant-selector">
+                <h3>Scegli il tuo modello:</h3>
+                <div class="variant-toggle">
+                    <input type="radio" id="w01e" name="product-variant" value="w01e" checked>
+                    <label for="w01e" class="variant-option">
+                        <span class="variant-name">KL-W01E</span>
+                        <span class="variant-desc">Standard</span>
+                    </label>
+                    
+                    <input type="radio" id="w01ec" name="product-variant" value="w01ec">
+                    <label for="w01ec" class="variant-option">
+                        <span class="variant-name">KL-W01EC</span>
+                        <span class="variant-desc">Con Filtri ai Carboni Attivi</span>
+                    </label>
+                </div>
+            </div>
+            
+            <h1 id="product-title">KL-W01E Purificatore Fotocatalitico</h1>
             <div class="product-reviews-summary">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -60,10 +79,10 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <p class="product-short-desc">
+            <p class="product-short-desc" id="product-description">
                 Elimina virus, batteri, odori e VOC con la tecnologia fotocatalitica brevettata. Silenzioso, senza filtri da sostituire e dal design elegante.
             </p>
-            <div class="product-price-new">€699,00</div>
+            <div class="product-price-new" id="product-price">€649,00</div>
             
             <button class="btn-buy-main">Acquista</button>
 
@@ -80,6 +99,44 @@
 
 <!-- Inserisci questo script prima della chiusura del tag </body> -->
 <script>
+    // Dati dei prodotti
+    const productData = {
+        w01e: {
+            title: "KL-W01E Purificatore Fotocatalitico",
+            price: "€649,00",
+            description: "Elimina virus, batteri, odori e VOC con la tecnologia fotocatalitica brevettata. Silenzioso, senza filtri da sostituire e dal design elegante.",
+            specs: {
+                model: "KL-W01E",
+                purification: "Filtro Fotocatalitico",
+                power: "AC100V-240V 50/60Hz (Adattatore DC24V)",
+                coverage: "Circa 25m² (60 min) / 13m² (30 min)",
+                modes: "Alta / Bassa / Silenziosa",
+                consumption: "40W (Alta) / 35W (Bassa) / 33W (Silenziosa)",
+                noise: "44dB (Alta) / 39dB (Bassa) / 20dB (Silenziosa)",
+                dimensions: "441 × 436 × 83 mm (L × A × P)",
+                weight: "Circa 3.0 kg",
+                color: "Bianco"
+            }
+        },
+        w01ec: {
+            title: "KL-W01EC Purificatore Fotocatalitico con Filtri ai Carboni Attivi",
+            price: "€699,00",
+            description: "Elimina virus, batteri, odori e VOC con la tecnologia fotocatalitica brevettata PLUS filtri ai carboni attivi per una purificazione superiore. Ideale per ambienti con odori persistenti.",
+            specs: {
+                model: "KL-W01EC",
+                purification: "Filtro Fotocatalitico + Filtri ai Carboni Attivi",
+                power: "AC100V-240V 50/60Hz (Adattatore DC24V)",
+                coverage: "Circa 25m² (60 min) / 13m² (30 min)",
+                modes: "Alta / Bassa / Silenziosa",
+                consumption: "42W (Alta) / 37W (Bassa) / 35W (Silenziosa)",
+                noise: "44dB (Alta) / 39dB (Bassa) / 20dB (Silenziosa)",
+                dimensions: "441 × 436 × 83 mm (L × A × P)",
+                weight: "Circa 3.2 kg",
+                color: "Bianco"
+            }
+        }
+    };
+
     function changeImageNew(newSrc, clickedThumbnail) {
         document.getElementById('mainProductImageNew').src = newSrc;
         
@@ -87,6 +144,72 @@
         thumbnails.forEach(thumb => thumb.classList.remove('active'));
         clickedThumbnail.classList.add('active');
     }
+
+    // Funzione per aggiornare il contenuto del prodotto
+    function updateProductContent(variant) {
+        const data = productData[variant];
+        
+        // Aggiorna titolo, prezzo e descrizione
+        document.getElementById('product-title').textContent = data.title;
+        document.getElementById('product-price').textContent = data.price;
+        document.getElementById('product-description').textContent = data.description;
+        
+        // Aggiorna le specifiche tecniche
+        updateSpecifications(data.specs);
+        
+        // Aggiorna il titolo della sezione hero se esiste
+        const heroTitle = document.querySelector('.product-info h1');
+        if (heroTitle) {
+            heroTitle.textContent = variant === 'w01e' ? 'Kaltech KL-W01E' : 'Kaltech KL-W01EC';
+        }
+        
+        // Aggiorna la descrizione della sezione hero se esiste
+        const heroDesc = document.querySelector('.product-description');
+        if (heroDesc) {
+            heroDesc.textContent = data.description;
+        }
+    }
+
+    // Funzione per aggiornare le specifiche tecniche
+    function updateSpecifications(specs) {
+        const specItems = document.querySelectorAll('.spec-item');
+        const specMap = {
+            'Modello': specs.model,
+            'Metodo di Purificazione': specs.purification,
+            'Alimentazione': specs.power,
+            'Superficie Applicabile': specs.coverage,
+            'Modalità Flusso d\'Aria': specs.modes,
+            'Consumo Energetico': specs.consumption,
+            'Rumorosità': specs.noise,
+            'Dimensioni': specs.dimensions,
+            'Peso': specs.weight,
+            'Colore': specs.color
+        };
+        
+        specItems.forEach(item => {
+            const label = item.querySelector('.spec-label').textContent;
+            const valueElement = item.querySelector('.spec-value');
+            if (specMap[label]) {
+                valueElement.textContent = specMap[label];
+            }
+        });
+    }
+
+    // Event listener per il cambio di variante
+    document.addEventListener('DOMContentLoaded', function() {
+        const variantInputs = document.querySelectorAll('input[name="product-variant"]');
+        
+        variantInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                if (this.checked) {
+                    updateProductContent(this.value);
+                }
+            });
+        });
+        
+        // Inizializza con W01E selezionato
+        updateProductContent('w01e');
+    });
 </script>
 <!-- Hero Section -->
 <section class="product-hero">
