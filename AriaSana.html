@@ -20,9 +20,10 @@
         <img src="images/logo.png" alt="Logo" class="logo" />
       </a>
       <nav class="nav-links" id="nav-links">
-        <a href="AriaSana.html" class="active">GeotekAriaSana</a>    
-        <a href="#prodotti">Prodotti</a>
+        <a href="AriaSana.html">GeotekAriaSana</a>    
+        <a href="/geotekedilizia-salute">GeotekEdilizia&Salute</a>
         <a href="/novita">Novità</a>
+        <a href="blog.html">Blog</a>
         <a href="contatti.html">Contatti</a>
         <a href="chi-siamo.html">Chi siamo</a>
       </nav>
@@ -63,133 +64,245 @@
             <div class="section-header">
                 <h2>I Nostri Prodotti per un'Aria Pura</h2>
                 <p>Soluzioni tecnologiche all'avanguardia per la ventilazione e la purificazione dell'aria.</p>
-            <div class="product-sections">
-                <!-- Sezione Kaltech -->
-                <section class="product-category" id="kaltech">
-                    <h3>Kaltech</h3>
-                    <div class="category-grid">
-                        <div class="prodotto-card">
-                            <div class="prodotto-badge online">🛒 Disponibile online</div>
-                            <div class="prodotto-image">
-                                <img src="kaltech/W01e/1.jpg" alt="Kaltech W01E">
-                            </div>
-                            <div class="prodotto-content">
-                                <h4>Kaltech W01-E</h4>
-                                <p>Purificatore d'aria fotocatalitico compatto, ideale per ambienti domestici fino a 16m². Elimina virus, batteri e odori senza sostituzione del filtro.</p>
-                                <a href="W01E.html" class="btn-buy">
-                                  🛒 Acquista ora
-                                </a>
-                            </div>
-                        </div>
-                        <div class="prodotto-card">
-                            <div class="prodotto-badge online">🛒 Disponibile online</div>
-                            <div class="prodotto-image">
-                                <img src="kaltech/P02/1.jpg" alt="Kaltech P02 MY AIR pendant">
-                            </div>
-                            <div class="prodotto-content">
-                                <h4>Kaltech P02 (MY AIR pendant)</h4>
-                                <p>Purificatore d'aria personale indossabile. Crea una barriera d'aria pulita intorno a te, ideale per viaggi e ambienti affollati.</p>
-                                  <a href="P02.html" class="btn-buy">
-                                  🛒 Acquista ora
-                                  </a>
-                            </div>
-                        </div>
-                        <div class="prodotto-card">
-                            <div class="prodotto-badge online">🛒 Disponibile online</div>
-                            <div class="prodotto-image">
-                                <img src="kaltech/W02e/1.png" alt="Kaltech KL-W02E">
-                            </div>
-                            <div class="prodotto-content">
-                                <h4>Kaltech KL-W02E</h4>
-                                <p>Purificatore d'aria commerciale per grandi spazi fino a 30m², con tecnologia fotocatalitica potenziata, ideale per ambienti professionali.</p>
-                                  <a href="KL-W02E.html" class="btn-buy">
-                                    🛒 Acquista ora
-                                  </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category-grid-bottom">
-                        <div class="prodotto-card">
-                            <div class="prodotto-badge consulenza">📞 richiedi consulenza</div>
-                            <div class="prodotto-image">
-                                <img src="kaltech/F01/1.jpg" alt="Kaltech KL-F01">
-                            </div>
-                            <div class="prodotto-content">
-                                <h4>Kaltech KL-F01</h4>
-                                <p>Modello da pavimento ad alta capacità per ambienti fino a 60m². Purifica l'aria con tecnologia fotocatalitica e filtro HEPA.</p>
-                                <a href="KL-F01.html" class="btn-secondary">Scopri di più</a>
-                            </div>
-                        </div>
-                </section>
+            </div>
+            
+            <!-- Menu Filtri -->
+            <div class="filter-menu">
+                <button class="filter-btn active" data-filter="all">Tutti</button>
+                <button class="filter-btn" data-filter="kaltech">Kaltech</button>
+                <button class="filter-btn" data-filter="meltem">Meltem</button>
+                <button class="filter-btn" data-filter="helty">Helty</button>
+            </div>
 
-                <!-- Sezione Meltem -->
-                <section class="product-category" id="meltem">
-                    <h3>Meltem</h3>
-                    <div class="category-grid">
-                        <div class="prodotto-card">
-                            <div class="prodotto-badge consulenza">📞 richiedi consulenza</div>
-                            <div class="prodotto-image">
-                                <img src="Meltem/WRG/1.jpg" alt="Meltem M-WRG">
-                            </div>
-                            <div class="prodotto-content">
-                                <h4>Meltem M-WRG</h4>
-                                <p>Sistema VMC puntuale con recupero di calore fino al 94%. Portata d'aria 15-60 m³/h, ideale per un ricambio d'aria costante e controllato con minima rumorosità (18 dB).</p>
-                                <a href="M-WRG.html" class="btn-secondary">Scopri di più</a>
-                            </div>
-                        </div>
-                        <div class="prodotto-card">
-                            <div class="prodotto-badge consulenza">📞 richiedi consulenza</div>
-                            <div class="prodotto-image">
-                                <img src="Meltem/WRG2/1.jpg" alt="Meltem M-WRG-II">
-                            </div>
-                            <div class="prodotto-content">
-                                <h4>Meltem M-WRG-II</h4>
-                                <p>Versione avanzata del sistema VMC Meltem (280x280x100mm, 2.5kg) con recupero di calore potenziato (fino al 94%) e funzionalità smart. Portata 15-60 m³/h, certificazione Casa Passiva.</p>
-                                <a href="M-WRG-II.html" class="btn-secondary">Scopri di più</a>
+            <!-- Grid Prodotti -->
+            <div class="products-grid">
+                <!-- Prodotti Kaltech -->
+                <div class="product-card" data-brand="kaltech">
+                    <div class="product-image">
+                        <img src="kaltech/W01e/1.jpg" alt="Kaltech W01E">
+                        <div class="product-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-eye"></i>
+                                <span>Visualizza dettagli</span>
                             </div>
                         </div>
                     </div>
-                </section>
+                    <div class="product-badge brand-kaltech">Kaltech</div>
+                    <div class="product-content">
+                        <h3>Kaltech W01-E</h3>
+                        <p>Purificatore d'aria fotocatalitico compatto, ideale per ambienti domestici fino a 16m². Elimina virus, batteri e odori senza sostituzione del filtro.</p>
+                        <div class="product-status online">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Disponibile online</span>
+                        </div>
+                        <a href="W01E.html" class="product-btn btn-buy">
+                            <i class="fas fa-shopping-cart"></i>
+                            Acquista ora
+                        </a>
+                    </div>
+                </div>
 
-                <!-- Sezione Helty -->
-                <section class="product-category" id="helty">
-                    <h3>Helty</h3>
-                    <div class="category-grid">
-                        <div class="prodotto-card">
-                            <div class="prodotto-badge consulenza">📞 richiedi consulenza</div>
-                            <div class="prodotto-image">
-                                <img src="Helty/EASY/1.webp" alt="Helty FlowEASY">
-                            </div>
-                            <div class="prodotto-content">
-                                <h4>Helty FlowEASY</h4>
-                                <p>VMC compatta (566x280x177mm, 7kg) con recupero termico del 91%. Portata aria fino a 42 m³/h, pressione sonora minima 18dB. Ideale per ambienti fino a 20m².</p>
-                                <a href="FlowEASY.html" class="btn-secondary">Scopri di più</a>
-                            </div>
-                        </div>
-                        <div class="prodotto-card">
-                            <div class="prodotto-badge consulenza">📞 richiedi consulenza</div>
-                            <div class="prodotto-image">
-                                <img src="Helty/PLUS/1.jpg" alt="Helty FlowPLUS">
-                            </div>
-                            <div class="prodotto-content">
-                                <h4>Helty FlowPLUS</h4>
-                                <p>VMC automatica (695x353x152mm, 8kg) con sensore igrometrico integrato. Recupero termico 91%, pressione sonora minima 18dB. Controllo via App Helty Home.</p>
-                                <a href="FlowPLUS.html" class="btn-secondary">Scopri di più</a>
-                            </div>
-                        </div>
-                        <div class="prodotto-card">
-                            <div class="prodotto-badge consulenza">📞 richiedi consulenza</div>
-                            <div class="prodotto-image">
-                                <img src="Helty/ELITE/1.png" alt="Helty FlowELITE">
-                            </div>
-                            <div class="prodotto-content">
-                                <h4>Helty FlowELITE</h4>
-                                <p>VMC top di gamma (695x353x152mm, 8kg) con sensori umidità, CO₂ e VOC, illuminazione LED integrata (1000lm, 4000K) e tecnologia Color Trust. Recupero termico 91%.</p>
-                                <a href="FlowELITE.html" class="btn-secondary">Scopri di più</a>
+                <div class="product-card" data-brand="kaltech">
+                    <div class="product-image">
+                        <img src="kaltech/P02/1.jpg" alt="Kaltech P02 MY AIR pendant">
+                        <div class="product-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-eye"></i>
+                                <span>Visualizza dettagli</span>
                             </div>
                         </div>
                     </div>
-                </section>
+                    <div class="product-badge brand-kaltech">Kaltech</div>
+                    <div class="product-content">
+                        <h3>Kaltech P02 (MY AIR pendant)</h3>
+                        <p>Purificatore d'aria personale indossabile. Crea una barriera d'aria pulita intorno a te, ideale per viaggi e ambienti affollati.</p>
+                        <div class="product-status online">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Disponibile online</span>
+                        </div>
+                        <a href="P02.html" class="product-btn btn-buy">
+                            <i class="fas fa-shopping-cart"></i>
+                            Acquista ora
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="kaltech">
+                    <div class="product-image">
+                        <img src="kaltech/W02e/1.png" alt="Kaltech KL-W02E">
+                        <div class="product-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-eye"></i>
+                                <span>Visualizza dettagli</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-badge brand-kaltech">Kaltech</div>
+                    <div class="product-content">
+                        <h3>Kaltech KL-W02E</h3>
+                        <p>Purificatore d'aria commerciale per grandi spazi fino a 30m², con tecnologia fotocatalitica potenziata, ideale per ambienti professionali.</p>
+                        <div class="product-status online">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Disponibile online</span>
+                        </div>
+                        <a href="KL-W02E.html" class="product-btn btn-buy">
+                            <i class="fas fa-shopping-cart"></i>
+                            Acquista ora
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="kaltech">
+                    <div class="product-image">
+                        <img src="kaltech/F01/1.jpg" alt="Kaltech KL-F01">
+                        <div class="product-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-eye"></i>
+                                <span>Visualizza dettagli</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-badge brand-kaltech">Kaltech</div>
+                    <div class="product-content">
+                        <h3>Kaltech KL-F01</h3>
+                        <p>Modello da pavimento ad alta capacità per ambienti fino a 60m². Purifica l'aria con tecnologia fotocatalitica e filtro HEPA.</p>
+                        <div class="product-status consultation">
+                            <i class="fas fa-phone"></i>
+                            <span>Richiedi consulenza</span>
+                        </div>
+                        <a href="KL-F01.html" class="product-btn btn-consultation">
+                            <i class="fas fa-info-circle"></i>
+                            Scopri di più
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Prodotti Meltem -->
+                <div class="product-card" data-brand="meltem">
+                    <div class="product-image">
+                        <img src="Meltem/WRG/1.jpg" alt="Meltem M-WRG">
+                        <div class="product-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-eye"></i>
+                                <span>Visualizza dettagli</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-badge brand-meltem">Meltem</div>
+                    <div class="product-content">
+                        <h3>Meltem M-WRG</h3>
+                        <p>Sistema VMC puntuale con recupero di calore fino al 94%. Portata d'aria 15-60 m³/h, ideale per un ricambio d'aria costante e controllato con minima rumorosità (18 dB).</p>
+                        <div class="product-status consultation">
+                            <i class="fas fa-phone"></i>
+                            <span>Richiedi consulenza</span>
+                        </div>
+                        <a href="M-WRG.html" class="product-btn btn-consultation">
+                            <i class="fas fa-info-circle"></i>
+                            Scopri di più
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="meltem">
+                    <div class="product-image">
+                        <img src="Meltem/WRG2/1.jpg" alt="Meltem M-WRG-II">
+                        <div class="product-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-eye"></i>
+                                <span>Visualizza dettagli</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-badge brand-meltem">Meltem</div>
+                    <div class="product-content">
+                        <h3>Meltem M-WRG-II</h3>
+                        <p>Versione avanzata del sistema VMC Meltem (280x280x100mm, 2.5kg) con recupero di calore potenziato (fino al 94%) e funzionalità smart. Portata 15-60 m³/h, certificazione Casa Passiva.</p>
+                        <div class="product-status consultation">
+                            <i class="fas fa-phone"></i>
+                            <span>Richiedi consulenza</span>
+                        </div>
+                        <a href="M-WRG-II.html" class="product-btn btn-consultation">
+                            <i class="fas fa-info-circle"></i>
+                            Scopri di più
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Prodotti Helty -->
+                <div class="product-card" data-brand="helty">
+                    <div class="product-image">
+                        <img src="Helty/EASY/1.webp" alt="Helty FlowEASY">
+                        <div class="product-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-eye"></i>
+                                <span>Visualizza dettagli</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-badge brand-helty">Helty</div>
+                    <div class="product-content">
+                        <h3>Helty FlowEASY</h3>
+                        <p>VMC compatta (566x280x177mm, 7kg) con recupero termico del 91%. Portata aria fino a 42 m³/h, pressione sonora minima 18dB. Ideale per ambienti fino a 20m².</p>
+                        <div class="product-status consultation">
+                            <i class="fas fa-phone"></i>
+                            <span>Richiedi consulenza</span>
+                        </div>
+                        <a href="FlowEASY.html" class="product-btn btn-consultation">
+                            <i class="fas fa-info-circle"></i>
+                            Scopri di più
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="helty">
+                    <div class="product-image">
+                        <img src="Helty/PLUS/1.jpg" alt="Helty FlowPLUS">
+                        <div class="product-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-eye"></i>
+                                <span>Visualizza dettagli</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-badge brand-helty">Helty</div>
+                    <div class="product-content">
+                        <h3>Helty FlowPLUS</h3>
+                        <p>VMC automatica (695x353x152mm, 8kg) con sensore igrometrico integrato. Recupero termico 91%, pressione sonora minima 18dB. Controllo via App Helty Home.</p>
+                        <div class="product-status consultation">
+                            <i class="fas fa-phone"></i>
+                            <span>Richiedi consulenza</span>
+                        </div>
+                        <a href="FlowPLUS.html" class="product-btn btn-consultation">
+                            <i class="fas fa-info-circle"></i>
+                            Scopri di più
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-brand="helty">
+                    <div class="product-image">
+                        <img src="Helty/ELITE/1.png" alt="Helty FlowELITE">
+                        <div class="product-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-eye"></i>
+                                <span>Visualizza dettagli</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-badge brand-helty">Helty</div>
+                    <div class="product-content">
+                        <h3>Helty FlowELITE</h3>
+                        <p>VMC top di gamma (695x353x152mm, 8kg) con sensori umidità, CO₂ e VOC, illuminazione LED integrata (1000lm, 4000K) e tecnologia Color Trust. Recupero termico 91%.</p>
+                        <div class="product-status consultation">
+                            <i class="fas fa-phone"></i>
+                            <span>Richiedi consulenza</span>
+                        </div>
+                        <a href="FlowELITE.html" class="product-btn btn-consultation">
+                            <i class="fas fa-info-circle"></i>
+                            Scopri di più
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -335,12 +448,11 @@
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-ariasana">
+    <section class="footer-info">
       <div class="footer-content">
         <div class="footer-map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2844.572823066314!2d11.24904131550511!3d44.56305117909859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd984591df0b3%3A0xe9ef147caa996bb7!2sVia%20Zanarini%2C%207%20%E2%80%93%20Sala%20Bolognese%20BO!5e0!3m2!1sit!2sit!4v1690886868999!5m2!1sit!2sit"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2844.572823066314!2d11.24904131550511!3d44.56305117909859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd984591df0b3%3A0xe9ef147caa996bb7!2sVia%20Zanarini%207%2C%2040000%20Sala%20Bolognese%20BO!5e0!3m2!1sit!2sit!4v1690886868999!5m2!1sit!2sit"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Mappa Via Zanarini, Sala Bolognese"></iframe>
         </div>
         
@@ -384,27 +496,51 @@
     </section>
   </main>
 
-  <script>
-    const hamburger = document.getElementById('hamburger' );
-    const navLinks = document.getElementById('nav-links');
+  <footer>
+    <p>BioGeotek® | Via Zanarini, 7 – Sala Bolognese (BO ) | Tel: <a href="tel:0516814689" style="color: white; text-decoration: none;">051 681 4689</a></p>
+  </footer>
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+  <script>
+    // Sistema di filtri per i prodotti
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Rimuovi classe active da tutti i bottoni
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Aggiungi classe active al bottone cliccato
+                this.classList.add('active');
+
+                // Filtra i prodotti
+                productCards.forEach(card => {
+                    const brand = card.getAttribute('data-brand');
+                    
+                    if (filter === 'all' || brand === filter) {
+                        card.style.display = 'block';
+                        card.style.animation = 'fadeInUp 0.5s ease forwards';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Aggiungi animazione al caricamento
+        productCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
     });
 
-    // Smooth scrolling per i link interni
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
+    // Hamburger menu
+    document.getElementById('hamburger').addEventListener('click', function() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('active');
     });
   </script>
 </body>
 </html>
+

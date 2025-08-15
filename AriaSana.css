@@ -123,48 +123,14 @@
 .quality-indicator i {
     font-size: 1.2rem;
 }
-/* Badge prodotto */
-.prodotto-badge {
-    display: inline-block;
-    padding: 6px 12px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border-radius: 20px;
-    margin: 10px auto;
-    text-align: center;
-}
 
-.prodotto-badge.online {
-    background: linear-gradient(135deg, #4caf50, #66bb6a);
-    color: white;
-}
+/* =================================== */
+/*         NUOVA SEZIONE PRODOTTI      */
+/* =================================== */
 
-.prodotto-badge.consulenza {
-    background: linear-gradient(135deg, #00bcd4, #0097a7);
-    color: white;
-}
-.btn-buy {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #4caf50, #66bb6a);
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
-}
-
-.btn-buy:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-}
-
-/* Sezione Problematiche */
-.problematiche {
+.prodotti {
     padding: 5rem 2rem;
-    background: #fff;
+    background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
 }
 
 .section-container {
@@ -174,7 +140,7 @@
 
 .section-header {
     text-align: center;
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
 }
 
 .section-header h2 {
@@ -189,6 +155,297 @@
     color: #666;
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* Menu Filtri */
+.filter-menu {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 24px;
+    border: 2px solid #00bcd4;
+    background: transparent;
+    color: #00bcd4;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.filter-btn:hover::before,
+.filter-btn.active::before {
+    left: 0;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 188, 212, 0.3);
+}
+
+/* Grid Prodotti */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Card Prodotto */
+.product-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 26, 51, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    border: 1px solid rgba(0, 188, 212, 0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 26, 51, 0.15);
+    border-color: rgba(0, 188, 212, 0.3);
+}
+
+/* Immagine Prodotto */
+.product-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8fbff 0%, #e8f4fd 100%);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+/* Overlay Immagine */
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 188, 212, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    text-align: center;
+    color: white;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .overlay-content {
+    transform: translateY(0);
+}
+
+.overlay-content i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.overlay-content span {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Badge Marca */
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.brand-kaltech {
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+}
+
+.brand-meltem {
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+}
+
+.brand-helty {
+    background: linear-gradient(135deg, #001a33, #003366);
+}
+
+/* Contenuto Prodotto */
+.product-content {
+    padding: 1.5rem;
+}
+
+.product-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #001a33;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+
+.product-content p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Status Prodotto */
+.product-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+    padding: 8px 12px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.product-status.online {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.product-status.consultation {
+    background: rgba(0, 188, 212, 0.1);
+    color: #00bcd4;
+    border: 1px solid rgba(0, 188, 212, 0.3);
+}
+
+.product-status i {
+    font-size: 1rem;
+}
+
+/* Pulsanti Prodotto */
+.product-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.btn-buy {
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    color: white;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-buy::before {
+    background: linear-gradient(135deg, #66bb6a, #4caf50);
+}
+
+.btn-consultation {
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+}
+
+.btn-consultation::before {
+    background: linear-gradient(135deg, #0097a7, #00bcd4);
+}
+
+.product-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.product-btn:hover::before {
+    left: 0;
+}
+
+/* Animazioni */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+/* Sezione Problematiche */
+.problematiche {
+    padding: 5rem 2rem;
+    background: #fff;
 }
 
 .problemi-grid {
@@ -480,6 +737,11 @@
         gap: 3rem;
     }
     
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+    
     .servizio-card,
     .servizio-card:nth-child(even) {
         flex-direction: column;
@@ -498,6 +760,7 @@
         min-height: 70vh;
     }
     
+    .prodotti,
     .problematiche,
     .servizi,
     .benefici {
@@ -529,6 +792,20 @@
         max-width: 300px;
     }
     
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .filter-menu {
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
     .problemi-grid {
         grid-template-columns: 1fr;
     }
@@ -555,532 +832,18 @@
     .beneficio-item {
         padding: 1rem;
     }
-}
-
-/* Sezione Prodotti */
-.prodotti {
-    padding: 5rem 2rem;
-    /* Sfondo più elaborato con un gradiente molto leggero per dare profondità */
-    background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
-}
-
-.prodotti-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.prodotto-card {
-    display: flex;
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.1);
-    transition: all 0.3s ease;
-    align-items: center;
-}
-
-.prodotto-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 188, 212, 0.15);
-}
-
-
-
-.prodotto-image {
-    flex: 1;
-    max-width: 300px;
-}
-
-.prodotto-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.prodotto-content {
-    flex: 2;
-    padding: 2rem;
-}
-
-.prodotto-content h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #001a33;
-    margin-bottom: 1rem;
-}
-
-.prodotto-content p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.prodotto-content ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2rem;
-}
-
-.prodotto-content li {
-    padding: 0.5rem 0;
-    color: #666;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.prodotto-content li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #00bcd4;
-    font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    .prodotti {
-        padding: 3rem 1rem;
+    
+    .product-content {
+        padding: 1.2rem;
     }
-    .prodotto-card {
-        flex-direction: column;
-        text-align: center;
+    
+    .product-content h3 {
+        font-size: 1.2rem;
     }
-    .prodotto-image {
-        max-width: 100%;
-    }
-    .prodotto-image img {
-        border-radius: 15px 15px 0 0;
-    }
-    .prodotto-content {
-        padding: 1.5rem;
+    
+    .filter-btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
     }
 }
 
-/* Stili per Kaltech.html */
-.kaltech-detail-hero {
-    padding: 5rem 2rem;
-    background: linear-gradient(135deg, #f0f8ff 0%, #e8f4fd 100%);
-    display: flex;
-    align-items: center;
-}
-
-.kaltech-detail-content {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.kaltech-detail-image {
-    flex: 1;
-    max-width: 500px;
-}
-
-.kaltech-detail-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(0, 188, 212, 0.2);
-}
-
-.kaltech-detail-text {
-    flex: 1;
-    max-width: 600px;
-}
-
-.kaltech-detail-text h1 {
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    color: #001a33;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-
-.kaltech-detail-text .slogan {
-    font-size: 1.3rem;
-    color: #00bcd4;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-}
-
-.kaltech-detail-text p {
-    font-size: 1.1rem;
-    color: #2c5282;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-}
-
-.price-section {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 2.5rem;
-}
-
-.price {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #4caf50;
-}
-
-.buy-button {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #4caf50, #66bb6a);
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
-}
-
-.buy-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-}
-
-.key-features {
-    background: #e0f7fa;
-    padding: 2rem;
-    border-radius: 10px;
-    border-left: 5px solid #00bcd4;
-}
-
-.key-features h3 {
-    font-size: 1.5rem;
-    color: #001a33;
-    margin-bottom: 1.5rem;
-}
-
-.key-features ul {
-    list-style: none;
-    padding: 0;
-}
-
-.key-features li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.8rem;
-    margin-bottom: 0.8rem;
-    color: #2c5282;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.key-features li i {
-    color: #00bcd4;
-    font-size: 1.2rem;
-    margin-top: 0.2rem;
-}
-
-.kaltech-specs {
-    padding: 5rem 2rem;
-    background: #fff;
-}
-
-.kaltech-specs h2 {
-    text-align: center;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 700;
-    color: #001a33;
-    margin-bottom: 3.5rem;
-}
-
-.specs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.spec-item {
-    background: #f8fbff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    border: 1px solid #e0f7fa;
-    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.05);
-}
-
-.spec-item h4 {
-    font-size: 1.2rem;
-    color: #001a33;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.spec-item p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
-}
-
-.kaltech-how-it-works {
-    padding: 5rem 2rem;
-    background: linear-gradient(180deg, #e3f2fd 0%, #f1f8e9 100%);
-}
-
-.kaltech-how-it-works h2 {
-    text-align: center;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 700;
-    color: #001a33;
-    margin-bottom: 1.5rem;
-}
-
-.kaltech-how-it-works p {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto 3.5rem;
-}
-
-.process-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.step-card {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    border: 1px solid #f0f0f0;
-}
-
-.step-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
-
-.step-card i {
-    font-size: 2.5rem;
-    color: #00bcd4;
-    margin-bottom: 1.5rem;
-}
-
-.step-card h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #001a33;
-    margin-bottom: 1rem;
-}
-
-.step-card p {
-    color: #666;
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-@media (max-width: 992px) {
-    .kaltech-detail-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 3rem;
-    }
-    .kaltech-detail-text {
-        max-width: 100%;
-    }
-    .price-section {
-        justify-content: center;
-    }
-    .key-features {
-        text-align: left;
-    }
-}
-
-@media (max-width: 768px) {
-    .kaltech-detail-hero,
-    .kaltech-specs,
-    .kaltech-how-it-works {
-        padding: 3rem 1rem;
-    }
-    .kaltech-detail-text h1 {
-        font-size: 2rem;
-    }
-    .price {
-        font-size: 2rem;
-    }
-    .buy-button {
-        font-size: 1rem;
-        padding: 12px 25px;
-    }
-    .kaltech-specs h2,
-    .kaltech-how-it-works h2 {
-        font-size: 1.8rem;
-    }
-    .specs-grid,
-    .process-steps {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-
-
-/* Nuovi stili per le sezioni prodotto */
-.product-sections {
-    margin-top: 3rem;
-}
-
-.product-category {
-    margin-bottom: 4rem;
-}
-
-.product-category h3 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #001a33;
-    text-align: center;
-    margin-bottom: 2.5rem;
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.product-category h3::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #00bcd4, #4fc3f7);
-    border-radius: 2px;
-}
-
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-/* Aggiornamento stili per .prodotto-card */
-.prodotti .prodotto-card {
-    flex-direction: column;
-    text-align: center;
-    /* Ombra più morbida e stratificata per un effetto di profondità professionale */
-    box-shadow: 0 4px 8px rgba(0, 26, 51, 0.05), 0 10px 25px rgba(0, 26, 51, 0.07);
-    /* Bordo trasparente per preparare lo spazio per il gradiente su hover, evitando scatti */
-    border: 2px solid transparent;
-    /* Sfondo con un gradiente quasi impercettibile per dare profondità */
-    background: #fff; /* Sfondo bianco per la parte dell'immagine */
-    /* Transizione più fluida e specifica per le proprietà animate */
-    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);    border-radius: 15px; /* Assicura che il contenitore abbia i bordi arrotondati */
-}
-
-.prodotti .prodotto-card:hover {
-    /* Sollevamento più accentuato e ombra più definita al passaggio del mouse */
-    transform: translateY(-8px);
-    /* Ombra che riprende i colori del sito e bordo sfumato */
-    box-shadow: 0 8px 16px rgba(0, 188, 212, 0.1), 0 20px 40px rgba(0, 188, 212, 0.15);
-    border-image: linear-gradient(135deg, #00bcd4, #4fc3f7) 1;
-}
-
-.prodotti .prodotto-image {
-    max-width: 100%;
-    height: 200px; /* Altezza fissa per le immagini */
-    overflow: hidden;
-    border-radius: 15px 15px 0 0;
-}
-
-.prodotti .prodotto-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Assicura che l'immagine copra l'area */
-    border-radius: 15px 15px 0 0;
-}
-
-.prodotti .prodotto-content {
-    padding: 1.5rem;
-    flex: none; /* Rimuove flex-grow */
-    width: 100%;    /* Applica il gradiente solo alla sezione del contenuto */
-    background: linear-gradient(145deg, #002244, #003366);
-    border-radius: 0 0 13px 13px; /* Arrotonda solo gli angoli inferiori */
-}
-
-.prodotti .prodotto-content h4 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #ffffff; /* Testo bianco per contrasto sullo sfondo scuro */
-    margin-bottom: 0.8rem;
-}
-
-.prodotti .prodotto-content p {
-    font-size: 1rem;
-    color: #e0f7fa; /* Azzurro molto chiaro per il testo, più morbido del bianco puro */
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
-}
-
-.prodotti .prodotto-content .btn-secondary {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-}
-
-/* Media Queries per responsività */
-@media (max-width: 768px) {
-    .product-category h3 {
-        font-size: 1.8rem;
-    }
-    .category-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-
-
-/* Layout specifico per Kaltech: 3 riquadri sopra, 2 sotto */
-#kaltech .category-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    justify-content: center; /* Centra l'intera griglia se non occupa tutta la larghezza */
-}
-
-#kaltech .category-grid .prodotto-card:nth-child(4),
-#kaltech .category-grid .prodotto-card:nth-child(5) {
-    grid-column: span 1; /* Occupano una colonna ciascuno */
-    max-width: 300px; /* Limita la larghezza per non farlo espandere troppo */
-}
-
-/* Nuovo contenitore per centrare gli ultimi due elementi affiancati */
-#kaltech .category-grid-bottom {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    grid-column: 1 / -1; /* Occupa tutte le colonne della griglia principale */
-    margin-top: 2rem; /* Spazio tra la prima riga e la seconda */
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    #kaltech .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    #kaltech .category-grid .prodotto-card:nth-child(4),
-    #kaltech .category-grid .prodotto-card:nth-child(5) {
-        grid-column: span 1; /* Occupano 1 colonna */
-        max-width: 300px; /* Mantieni la larghezza massima */
-    }
-}
-
-@media (max-width: 768px) {
-    #kaltech .category-grid {
-        grid-template-columns: 1fr;
-    }
-    #kaltech .category-grid .prodotto-card:nth-child(4),
-    #kaltech .category-grid .prodotto-card:nth-child(5) {
-        grid-column: span 1; /* Occupano 1 colonna */
-        max-width: none; /* Rimuovi la larghezza massima */
-    }
-}
